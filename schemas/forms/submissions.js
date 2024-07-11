@@ -2,7 +2,7 @@ export default {
     name: "submission",
     title: "Contact Submissions",
     type: "document",
-    __experimental_actions: [/*'create',*/ 'update', 'delete', 'publish'], 
+    __experimental_actions: ['update', 'delete', 'publish'], 
     fields: [
         {
           name: "date",

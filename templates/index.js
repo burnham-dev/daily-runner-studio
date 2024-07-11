@@ -1,7 +1,6 @@
-import T from '@sanity/base/initial-value-template-builder'
-
-export default [
-  T.template({
+export const templates = (prev) => [
+  // NOTE: the builder is gone
+  {
     id: 'category-child',
     title: 'Category: Child',
     schemaType: 'category',
@@ -10,7 +9,6 @@ export default [
     value: ({parentId}) => ({
       parent: {_type: 'reference', _ref: parentId},
     }),
-  }),
-  // Insert all your other Templates
-  ...T.defaults(),
+  },
+  ...prev, // (same as `T.defaults()`)
 ]

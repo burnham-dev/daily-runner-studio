@@ -1,21 +1,14 @@
-import S from '@sanity/desk-tool/structure-builder';
-import documentStore from 'part:@sanity/base/datastore/document';
 import {map} from 'rxjs/operators';
 import {FiTag} from 'react-icons/fi';
 
-//error not coming from here
-
-// You may need to customise your `views` array here for adding live preview iframes, incoming references, etc
-const views = [S.view.form()]
-
-export default function parentChild(schemaType = 'category') {
-  const categoryParents = `_type == "${schemaType}" && !defined(parent) && !(_id in path("drafts.**"))`
+export const parentChild = (schemaType, S, documentStore) => {
+  const filter = `_type == "${schemaType}" && !defined(parent) && !(_id in path("drafts.**"))`
 
   return S.listItem(schemaType)
     .title('Categories')
     .icon(FiTag)
     .child(() =>
-      documentStore.listenQuery(`*[${categoryParents}]`).pipe(
+      documentStore.listenQuery(`*[${filter}]`).pipe(
         map((parents) =>
           S.list()
             .title('All Categories')

@@ -7,7 +7,7 @@ export default {
           name: 'logo',
           type: 'image',
           title: 'Logo',
-          __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'], 
+          __experimental_actions: ['update', 'publish'], 
           validation: (Rule) => { return Rule.required() }
         }
     ]
