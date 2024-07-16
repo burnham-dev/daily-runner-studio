@@ -1,9 +1,7 @@
-# Sanity Clean Content Studio
+## Other Resources
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+View demo site [here](https://demo.daily-runner.burnham.dev/)
+View frontend website Github [here](https://github.com/burnham-dev/daily-runner).
 
-Now you can do the following things:
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+
